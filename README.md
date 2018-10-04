@@ -2,6 +2,7 @@ Distributed uber alike application
 -----------------------------------
 [![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/gubrul/distributed-uber-application/LICENSE)
 [![PyPI version](https://badge.fury.io/py/catboost.svg)](https://badge.fury.io/py/catboost)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 An uber data pipeline web application. Kafka messaging broker, flask web application serving frontend app, Spark streaming and Cassandra database.
 
@@ -52,7 +53,7 @@ $distributed-uber-application: python manage.py
    - __ride__ {duration:10min, traffic_density:3,
    - __passenger__ {numOfPassengers:1,disable:false, numOfLaggage:2}
 
-__Traffic Density Parameter (TDP):__ <br />
+__Traffic Density Parameter (TDP):__ 
    - Calculate average speed a ride takes in certain road section and increase 1 density weight per 5km/h the car move slower.
    - Goes from 0 to 10 (0-free, 10-traffic jam}
 
@@ -62,7 +63,7 @@ __Install kafka__ (http://apache.mivzakim.net/kafka/2.0.0/kafka_2.11-2.0.0.tgz)
 
 __Install zookeeper__ (http://apache.mivzakim.net/zookeeper/)
 
-__Run zookeeper:__ <br />
+__Run zookeeper:__ 
 ```bash
  $ cd zookeeper-3.4.10 
  $ bin/zkServer.sh start 
@@ -70,13 +71,13 @@ __Run zookeeper:__ <br />
 ```
  
 
-__Run kafka:__ <br />
+__Run kafka:__ 
 ```bash
  $ cd kafka_2.11-2.0.0 
  $ bin/kafka-server-start.sh config/server.properties 
 ```
   
-__Type jps in kafka terminal:__ <br />
+__Type jps in kafka terminal:__ 
 ```bash
  $ jps 
    14644 Jps 
@@ -104,15 +105,15 @@ __To get list of all topics:__
 
 __Produce our rider's location:__ 
 ```bash
-$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic location <br />
+$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic location 
        $ {latitude:40.124124124, longitude:123.23123123213}
 ```
     
 __Create a consumer (driver) to receive rider's location:__ 
 ```bash
- $ bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 —topic location <br />
-         --from-beginning <br />
-       __Output:__ <br />
+ $ bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 —topic location 
+         --from-beginning 
+       __Output:__ 
        {latitude:40.124124124, longitude:123.23123123213}
 ```
       
@@ -132,7 +133,7 @@ __Create some new server-1 and server-2 configurations:__
       listeners=PLAINTEXT://:9094
       log.dirs=/tmp/kafka-logs-2
 ```
-__So in total we have 3 nodes listening to ports 9092,9093,9094.__<br />
+__So in total we have 3 nodes listening to ports 9092,9093,9094.__
 
 ___Let's start these nodes:___
 ```bash
@@ -143,7 +144,7 @@ __Our old topic location has only replication factor of 1 but because we added 2
    factor to three. So let's delete and create a new one with 3 replicas__
 ```bash 
    $  bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic location
-   $  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic location<br />   
+   $  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic location  
 ```
 
 __Gets topic's brokers information:__
