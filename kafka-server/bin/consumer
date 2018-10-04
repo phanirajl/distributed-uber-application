@@ -1,0 +1,5 @@
+#!/bin/bash
+# Author: Gabriel Munits
+
+cd /usr/local/Cellar/kafka/2.0.0/bin/
+kafka-console-consumer --zookeeper localhost:2181 --topic sample_topic --from-beginning
