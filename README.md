@@ -14,7 +14,7 @@ backend load which we will discuss later. To manage these docker containers we w
 
 ### Application Architecture 
 
-####6 distributed "micro" services: 
+#### 6 distributed "micro" services: 
    - __kafka server__
         - messaging broker for our riders and drivers communication
    - __cassandra server__
