@@ -37,7 +37,7 @@ backend load which we will discuss later. To manage these docker containers we w
 - pip3
 
 1) Create virtual environment and install pip requirements.
-```python
+```bash
 $distributed-uber-application: cd webapp/app
 $distributed-uber-application: virtualenv env
 $distributed-uber-application: source env/bin/activate
