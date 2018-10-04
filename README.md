@@ -1,6 +1,6 @@
 Distributed uber alike application
 -----------------------------------
-[![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/gubrul/distributed-uber-application/LICENSE)§
+[![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/gubrul/distributed-uber-application/LICENSE)
 [![PyPI version](https://badge.fury.io/py/catboost.svg)](https://badge.fury.io/py/catboost)
 
 An uber data pipeline web application. Kafka messaging broker, flask web application serving frontend app, Spark streaming and Cassandra database.
