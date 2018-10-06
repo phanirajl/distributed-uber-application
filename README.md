@@ -34,9 +34,9 @@ backend load which we will discuss later. To manage these docker containers we w
         - display in real time drivers and riders
 
 Visual architecture:
-![alt text](https://github.com/gubrul/distributed-uber-application/docs/architecture.png)
+![alt text](https://github.com/gubrul/distributed-uber-application/blob/master/docs/architecture.png)
 
-#### [Kafka Docs](https://github.com/gubrul/distributed-uber-application/docs/KAFKA.md)
+### [Kafka Installation and Configuration Docs](https://github.com/gubrul/distributed-uber-application/blob/master/docs/KAFKA.md)
 #### Web application 
 ##### Requiremenets 
 - python 3.7.0 
