@@ -4,7 +4,7 @@ Distributed uber alike application
 [![License: GNU](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/gubrul/distributed-uber-application/LICENSE)
 [![Kafka](https://img.shields.io/badge/kafka-2.0.0-brightgreen.svg)]()
 [![Python 3.5-3.7](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)]()
-[![Golang 1.11](https://img.shields.io/badge/Golang-1.11-blue.svg)]()
+[![Golang 1.11](https://img.shields.io/badge/Golang-1.11-blue.svg)]()<br/>
 An uber data pipeline web application. Kafka messaging broker, flask web application serving frontend app, Spark streaming and Cassandra database.
 
 The project is divided into 3 sub components, web application, kafka server and cassandra server. Each component is Dockerized allowing distribute our
