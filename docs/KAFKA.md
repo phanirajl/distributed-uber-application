@@ -52,8 +52,7 @@ $ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic location
     
 __Create a consumer (driver) to receive rider's location:__ 
 ```bash
- $ bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 —topic location 
-         --from-beginning 
+ $ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic location --from-beginning
        __Output:__ 
        {latitude:40.124124124, longitude:123.23123123213}
 ```
@@ -102,7 +101,14 @@ __Gets topic's brokers information:__
 
 __Publish few messages to our location topic:__<br />
 ```bash
- $ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic location --from-beginning
+ $ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic location
+        {long:38.895100,lat:-77.036400,city:"Washington DC"}
+        {long:34.781769,lat:32.085300,city:"Tel Aviv"}
+        {long:34.989571,lat:32.794044,city:"Haifa"}
+```
+__Consume our messages from our location topic:__<br />
+```bash
+$ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic location
         {long:38.895100,lat:-77.036400,city:"Washington DC"}
         {long:34.781769,lat:32.085300,city:"Tel Aviv"}
         {long:34.989571,lat:32.794044,city:"Haifa"}
