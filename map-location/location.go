@@ -1,7 +1,7 @@
 package map_location
 
 func main() {
-
+	"github.com/gubrul/dis"
 }
 
 func processLatLong() {

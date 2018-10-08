@@ -1,0 +1,4 @@
+{
+  "brokers" : ["localhost:9092"],
+  "topics" : ["location", "drivers", "riders", "routes"],
+}
